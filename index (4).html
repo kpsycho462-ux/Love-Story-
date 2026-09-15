@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaw ❤️ Shwe - Our Love Story</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ================= PAGE 1: ကြိုဆိုလွှာ ================= -->
+        <div class="page active">
+            <h1 class="title">Zaw ❤️ Shwe</h1>
+            <p class="subtitle">Our Love Journey</p>
+            <i class="fas fa-heart heart-icon"></i>
+            <p class="welcome-text">
+                မမအတွက် ကျနော် ဖန်တီးထားတဲ့ အမှတ်တရ ကမ္ဘာလေးထဲကို ကြိုဆိုပါတယ်... 🌸
+            </p>
+          <button class="btn" onclick="nextPage(); toggleMusic();">စတင်ကြည့်ရှုမယ် ➡️</button>
+
+        </div>
+
+        <!-- ================= PAGE 2: DAYS COUNTER ================= -->
+        <div class="page">
+            <h2 class="page-title">ငါတို့ စတင်ချစ်ခဲ့ကြတာ... ❤️</h2>
+            <div class="counter-card">
+                <div class="timer">
+                    <div class="time-box"><span id="days">0</span><label>ရက်</label></div>
+                    <div class="time-box"><span id="hours">0</span><label>နာရီ</label></div>
+                    <div class="time-box"><span id="minutes">0</span><label>မိနစ်</label></div>
+                    <div class="time-box"><span id="seconds">0</span><label>စက္ကန့်</label></div>
+                </div>
+            </div>
+            <p class="sub-desc">
+                အချိန်တွေ မည်မျှပင် ကုန်လွန်ပါစေ မင်းအပေါ်ထားတဲ့ ချစ်ခြင်းတွေကတော့ လျှော့မသွားပါဘူး။
+            </p>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+                <button class="btn" onclick="nextPage()">နောက်တစ်ခု ➡️</button>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 3: REASON GENERATOR ================= -->
+        <div class="page">
+            <h2 class="page-title">မင်းကို ဘာကြောင့် ချစ်တာလဲ? 💖</h2>
+            <div class="reason-box">
+                <p id="reason-text">အောက်က ခလုတ်လေးကို နှိပ်ကြည့်ပါဦး...</p>
+            </div>
+            <button class="btn-sm" onclick="showReason()">အကြောင်းအရင်းကြည့်ရန် 💌</button>
+            
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+                <button class="btn" onclick="nextPage()">နောက်တစ်ခု ➡️</button>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 4: INTERACTIVE QUESTION ================= -->
+        <div class="page">
+            <h2 class="page-title">စကားမစပ်... ❤️</h2>
+            <p class="question-text">
+                ကိုယ့်ကို ဆက်ချစ်ပေးမလား? 🥺
+            </p>
+
+            <div class="interactive-box" id="interactive-container">
+                <button id="yes-btn" class="btn-yes" onclick="acceptedLove()">ချစ်တာပေါ့ ❤️</button>
+                <button id="no-btn" class="btn-no" onmouseover="moveButton(this)" ontouchstart="moveButton(this)" onclick="moveButton(this)">မချစ်ပါဘူး 😜</button>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+                <button class="btn" onclick="nextPage()">နောက်တစ်ခု ➡️</button>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 5: SPECIAL PERMIT CARDS ================= -->
+        <div class="page">
+            <h2 class="page-title">မမအတွက် သီးသန့် အခွင့်အရေးများ 🎫</h2>
+            <p class="subtitle" style="margin-bottom: 15px;">(ကြိုက်နှစ်သက်ရာ အခွင့်အရေးကို နှိပ်ပြီး ထုတ်ယူနိုင်ပါတယ်) ✨</p>
+            
+            <div class="coupon-grid">
+                <!-- Card 1 -->
+                <div class="coupon-card">
+                    <div class="coupon-info">
+                        <h3>👑 မမ စကားနားထောင်ရမယ့်ခွင့် (၂ ခု)</h3>
+                        <p>မောင်က မမ စကားကို စိတ်တိုင်းကျ အလိုလိုက် နားထောင်ပေးရမည် (သက်တမ်း - ၃ နာရီ)</p>
+                    </div>
+                    <button class="btn-coupon" onclick="useCoupon(this, 'မမ စကားနားထောင်ရမယ့်ခွင့်')">ထုတ်ယူမည် 🎁</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="coupon-card">
+                    <div class="coupon-info">
+                        <h3>🎮 မမနဲ့အတူတူ ဂိမ်းဆော့ခွင့် (၅ ခု)</h3>
+                        <p>မမ စိတ်ကြိုက် အချိန်မရွေး အတူတူ ဂိမ်းဆော့ပေးရမည် (သက်တမ်း - အကန့်အသတ်မရှိ)</p>
+                    </div>
+                    <button class="btn-coupon" onclick="useCoupon(this, 'မမနဲ့အတူတူ ဂိမ်းဆော့ခွင့်')">ထုတ်ယူမည် 🎁</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="coupon-card">
+                    <div class="coupon-info">
+                        <h3>🍔 မမကို မုန့်ဝယ်ကျွေးခွင့် (၅ ခု)</h3>
+                        <p>မမ စားချင်တာ မှန်သမျှ မောင်က အကုန် လိုက်ကျွေးရမည် (သက်တမ်း - ၁ ရက်)</p>
+                    </div>
+                    <button class="btn-coupon" onclick="useCoupon(this, 'မမကို မုန့်ဝယ်ကျွေးခွင့်')">ထုတ်ယူမည် 🎁</button>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+                <button class="btn" onclick="nextPage()">နောက်တစ်ခု ➡️</button>
+            </div>
+        </div>
+
+<!-- ================= PAGE 6: SINGLE MEMORY PHOTO ================= -->
+<div class="page">
+    <h2 class="page-title">ချစ်စရာကောင်းသော မမ 📸</h2>
+    
+    <div class="photo-frame">
+        <!-- သင့် ဓာတ်ပုံဖိုင် နာမည်ကို src="photo1.jpg" နေရာတွင် ထည့်ပါ -->
+        <img src="/-6120802926721700088_121.jpg" alt="Memory Photo">
+        <p id="photo-caption">မောင့်အတွက် ချစ်စရာလေးပါ💜</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+        <button class="btn" onclick="nextPage()">နောက်တစ်ခု ➡️</button>
+    </div>
+</div>
+
+
+        <!-- ================= PAGE 7: SECRET LETTER ================= -->
+        <div class="page">
+            <h2 class="page-title">မင်းအတွက် လျှို့ဝှက် စာလွှာ 💌</h2>
+            <div class="letter-box">
+                <p><b>မမ အတွက်...</b></p>
+                <br>
+                <p>မင်းနဲ့ တွေ့ဆုံခဲ့ရတာ ငါ့ဘဝရဲ့ အလှပဆုံး ဆုလာဘ်ပါပဲ။ အနာဂတ်နေ့ရက်တိုင်းမှာလည်း ဒီအတိုင်း အတူတူ လက်တွဲသွားကြမယ်နော်။</p>
+                <br>
+                <p>ငါလည်း မင်းကို အရမ်းချစ်တယ်! 🥰💖🎉</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="prevPage()">⬅️ ရှေ့သို့</button>
+                <button class="btn" onclick="goToPage(0)">အစသို့ ပြန်သွားမည် 🔄</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bg-music" loop>
+        <source src="/db18461104b57f746291519669bd3210.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" onclick="toggleMusic()"><i id="music-icon" class="fas fa-music"></i></button>
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+</html>
